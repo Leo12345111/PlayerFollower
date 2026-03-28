@@ -208,9 +208,12 @@ toggle.MouseButton1Click:Connect(function()
 		toggle.Text = "TP OFF"
 		toggle.BackgroundColor3 = Color3.fromRGB(170, 40, 40)
 		if hrp and savedCFrame then
+			hrp.Anchored = true
 			hrp.CFrame = savedCFrame
 			hrp.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
 			hrp.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+			task.wait()
+			hrp.Anchored = false
 		end
 	end
 end)
